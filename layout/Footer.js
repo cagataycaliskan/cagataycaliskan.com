@@ -2,7 +2,9 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div>Footer</div>
+        <footer>
+            <div className='items-center justify-between '>Footer</div>
+        </footer>
     )
 }
 
