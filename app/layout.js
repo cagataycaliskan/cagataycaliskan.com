@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import "./styles/globals.css";
 import AppLayout from "@/layout/AppLayout";
 import Link from 'next/link';
+import Header from "@/layout/Header";
+import Footer from "@/layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,38 +23,15 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         {/* <AppLayout> */}
-        <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-black">
+        <main className="flex min-h-screen flex-col items-center justify-between  ">
 
-          <header className='flex items-center justify-between bg-black p-10'>
-            <nav>
-              <ul className='flex space-x-4'>
-                <li>
-                  <Link href="/" passHref legacyBehavior>
-                    <a className='text-blue-500 hover:text-blue-700'>Home</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" passHref legacyBehavior>
-                    <a className='text-blue-500 hover:text-blue-700'>About Me</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" passHref legacyBehavior>
-                    <a className='text-blue-500 hover:text-blue-700'>Contact</a>
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </header>
+          <Header />
 
           {children}
           {/* </AppLayout> */}
 
+          <Footer />
 
-          <footer>
-            <div className='items-center justify-between bg-yellow-200'>Footer</div>
-
-          </footer>
         </main>
       </body>
     </html>
