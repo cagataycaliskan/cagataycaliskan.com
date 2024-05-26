@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function Header() {
     return (
-        <header className='flex items-center justify-between bg-black p-10'>
+        <header className='flex items-center justify-between bg-yellow-500 p-10'>
             <nav>
                 <ul className='flex space-x-4'>
                     <li>
