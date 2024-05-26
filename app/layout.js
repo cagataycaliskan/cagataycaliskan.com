@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import "./styles/globals.css";
-import AppLayout from "@/layout/AppLayout";
 import Link from 'next/link';
 import Header from "@/layout/Header";
 import Footer from "@/layout/Footer";
