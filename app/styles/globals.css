@@ -31,3 +31,17 @@ body {
     text-wrap: balance;
   }
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.animated-text {
+  font-size: 2rem;
+  font-weight: bold;
+}
