@@ -55,10 +55,6 @@ export default function RootLayout({
         <main className="flex-grow flex flex-col items-center justify-center">
           {children}
         </main>
-
-        <footer className="p-3 flex items-center justify-center">
-          Created by Çağatay Çalışkan
-        </footer>
       </body>
     </html>
   );
