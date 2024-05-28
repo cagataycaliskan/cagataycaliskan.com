@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -19,6 +20,12 @@ export default function HomePage() {
           </div>
           <div className="text-orange-400 font-medium text-center text-lg sm:text-2xl">
             I AM A FRONT-END DEVELOPER
+          </div>
+
+          <div className="text-orange-400 font-medium text-center my-10 text-2xl sm:text-4xl">
+            <Link href="/about" passHref legacyBehavior>
+              <span style={{ cursor: "pointer" }}>SEE MORE ➡</span>
+            </Link>
           </div>
         </motion.div>
       </div>
