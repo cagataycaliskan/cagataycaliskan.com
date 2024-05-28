@@ -11,13 +11,13 @@ export default function HomePage() {
           animate={{ y: "-20vh", opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
-          <div className="text-orange-400 font-medium text-2xl text-center">
+          <div className="text-orange-400 font-medium text-center text-lg sm:text-2xl">
             MY NAME IS
           </div>
-          <div className="text-orange-400 font-medium text-4xl text-center my-3">
+          <div className="text-orange-400 font-medium text-center my-3 text-2xl sm:text-4xl">
             ÇAĞATAY ÇALIŞKAN
           </div>
-          <div className="text-orange-400 font-medium text-2xl text-center">
+          <div className="text-orange-400 font-medium text-center text-lg sm:text-2xl">
             I AM A FRONT-END DEVELOPER
           </div>
         </motion.div>
