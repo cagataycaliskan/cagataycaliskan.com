@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Maven_Pro } from "next/font/google";
 import "./styles/globals.css";
 import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Çağatay Çalışkan",
@@ -23,27 +23,27 @@ export default function RootLayout({
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2214%22>💻</text></svg>"
         />
       </head>
-      <body className="min-h-screen flex flex-col">
+      <body className={`${mavenPro.className} min-h-screen flex flex-col`}>
         <header className="flex items-center justify-end p-8">
           <nav>
             <ul className="flex space-x-10 mr-6">
               <li>
                 <Link href="/" passHref legacyBehavior>
-                  <a className="text-white hover:text-orange-400 font-medium">
+                  <a className="text-white hover:text-orange-400 font-medium active-link">
                     HOME
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/about" passHref legacyBehavior>
-                  <a className="text-white hover:text-orange-400 font-medium">
+                  <a className="text-white hover:text-orange-400 font-medium active-link">
                     ABOUT ME
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/contact" passHref legacyBehavior>
-                  <a className="text-white hover:text-orange-400 font-medium">
+                  <a className="text-white hover:text-orange-400 font-medium active-link">
                     CONTACT
                   </a>
                 </Link>
