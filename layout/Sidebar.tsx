@@ -1,9 +1,7 @@
-import React from "react";
-
 const Sidebar = () => {
   return (
-    <aside className="w-64 text-white flex flex-col p-4 space-y-4 fixed h-full">
-      <div className="flex flex-col ">
+    <aside className="w-64 text-white flex flex-col p-4 space-y-4 fixed h-full justify-end ">
+      <div className="mb-10" style={{ marginBottom: 100, paddingLeft: 32 }}>
         <a
           href="https://github.com/cagataycaliskan"
           target="_blank"
