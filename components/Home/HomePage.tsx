@@ -22,11 +22,7 @@ export default function HomePage() {
             I AM A FRONT-END DEVELOPER
           </div>
 
-          <div className="text-orange-400 font-medium text-center my-10 text-2xl sm:text-4xl">
-            <Link href="/about" passHref legacyBehavior>
-              <span style={{ cursor: "pointer" }}>SEE MORE ➡</span>
-            </Link>
-          </div>
+          <div className="text-orange-400 font-medium text-center my-10 text-2xl sm:text-4xl"></div>
         </motion.div>
       </div>
     </>
