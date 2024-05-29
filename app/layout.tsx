@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Maven_Pro } from "next/font/google";
 import "./styles/globals.css";
-import ActiveLink from "@/utils/ActiveLink";
+import HeaderLi from "@/utils/HeaderLi";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
@@ -27,15 +27,9 @@ export default function RootLayout({
         <header className="flex items-center justify-end p-8">
           <nav>
             <ul className="flex space-x-10 mr-2 sm:mr-6">
-              <li>
-                <ActiveLink href="/">HOME</ActiveLink>
-              </li>
-              <li>
-                <ActiveLink href="/about">ABOUT ME</ActiveLink>
-              </li>
-              <li>
-                <ActiveLink href="/contact">CONTACT</ActiveLink>
-              </li>
+              <HeaderLi href="/">HOME</HeaderLi>
+              <HeaderLi href="/about">ABOUT ME</HeaderLi>
+              <HeaderLi href="/contact">CONTACT</HeaderLi>
             </ul>
           </nav>
         </header>
