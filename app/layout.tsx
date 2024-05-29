@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Maven_Pro } from "next/font/google";
 import "./styles/globals.css";
-import Link from "next/link";
+import ActiveLink from "@/utils/ActiveLink";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
@@ -26,27 +26,15 @@ export default function RootLayout({
       <body className={`${mavenPro.className} min-h-screen flex flex-col`}>
         <header className="flex items-center justify-end p-8">
           <nav>
-            <ul className="flex space-x-10 mr-6">
+            <ul className="flex space-x-10 mr-2 sm:mr-6">
               <li>
-                <Link href="/" passHref legacyBehavior>
-                  <a className="text-white hover:text-orange-400 font-medium active-link">
-                    HOME
-                  </a>
-                </Link>
+                <ActiveLink href="/">HOME</ActiveLink>
               </li>
               <li>
-                <Link href="/about" passHref legacyBehavior>
-                  <a className="text-white hover:text-orange-400 font-medium active-link">
-                    ABOUT ME
-                  </a>
-                </Link>
+                <ActiveLink href="/about">ABOUT ME</ActiveLink>
               </li>
               <li>
-                <Link href="/contact" passHref legacyBehavior>
-                  <a className="text-white hover:text-orange-400 font-medium active-link">
-                    CONTACT
-                  </a>
-                </Link>
+                <ActiveLink href="/contact">CONTACT</ActiveLink>
               </li>
             </ul>
           </nav>
