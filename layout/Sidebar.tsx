@@ -1,7 +1,7 @@
 const Sidebar = () => {
   return (
     <aside className="w-64 text-white flex flex-col p-4 space-y-4 fixed h-full justify-end ">
-      <div className="mb-10" style={{ marginBottom: 100, paddingLeft: 32 }}>
+      <div className="mb-10" style={{ marginBottom: 200, paddingLeft: 64 }}>
         <a
           href="https://github.com/cagataycaliskan"
           target="_blank"
@@ -16,7 +16,17 @@ const Sidebar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <svg width="35" height="35" viewBox="0 0 24 24" fill="#0A66C2">
+          <svg
+            width="35"
+            height="35"
+            viewBox="0 0 24 24"
+            fill="#0A66C2"
+            style={{
+              marginTop: 20,
+              backgroundColor: "white",
+              borderRadius: 8,
+            }}
+          >
             <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.5 19.5h-3v-10h3v10zm-1.5-11.29c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.29h-3v-5.554c0-1.32-.027-3.021-1.843-3.021-1.844 0-2.127 1.437-2.127 2.924v5.651h-3v-10h2.886v1.367h.041c.402-.763 1.381-1.565 2.844-1.565 3.044 0 3.609 2.004 3.609 4.612v5.586z" />
           </svg>
         </a>
