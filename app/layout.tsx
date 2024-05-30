@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Maven_Pro } from "next/font/google";
 import "./styles/globals.css";
 import HeaderLi from "@/utils/HeaderLi";
-import Sidebar from "@/layout/SideBar";
+import Sidebar from "@/layout/Sidebar";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
