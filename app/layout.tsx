@@ -3,6 +3,8 @@ import { Maven_Pro } from "next/font/google";
 import "./styles/globals.css";
 import Sidebar from "@/layout/Sidebar";
 import Header from "@/layout/Header";
+import Link from "next/link";
+import HeaderLi from "@/utils/HeaderLi";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
@@ -26,6 +28,32 @@ export default function RootLayout({
       </head>
       <body className={`${mavenPro.className} min-h-screen flex flex-col`}>
         <Header />
+        {/* <header className="w-full flex items-center justify-between p-8">
+          <div className="block lg:hidden">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill={"yellow"}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+            </svg>
+          </div>
+
+          <Link href="/" passHref legacyBehavior>
+            <a className="text-orange-400 font-medium text-xl sm:text-2xl">
+              Çağatay Çalışkan
+            </a>
+          </Link>
+
+          <nav className="hidden lg:block">
+            <ul className="flex space-x-10 mr-2 sm:mr-6">
+              <HeaderLi href="/about">ABOUT ME</HeaderLi>
+              <HeaderLi href="/contact">CONTACT</HeaderLi>
+            </ul>
+          </nav>
+        </header> */}
         <div className="flex flex-1 w-full">
           <Sidebar />
           <main className="flex-grow p-8">{children}</main>
