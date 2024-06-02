@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Maven_Pro } from "next/font/google";
 import "./styles/globals.css";
-import HeaderLi from "@/utils/HeaderLi";
 import Sidebar from "@/layout/Sidebar";
+import Header from "@/layout/Header";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
@@ -24,22 +24,11 @@ export default function RootLayout({
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2214%22>💻</text></svg>"
         />
       </head>
-      <body className={`${mavenPro.className} min-h-screen flex`}>
-        <Sidebar />
-        <div className="flex-grow flex flex-col">
-          <header className="flex items-center justify-end p-8">
-            <nav>
-              <ul className="flex space-x-10 mr-2 sm:mr-6">
-                <HeaderLi href="/">HOME</HeaderLi>
-                <HeaderLi href="/about">ABOUT ME</HeaderLi>
-                <HeaderLi href="/contact">CONTACT</HeaderLi>
-              </ul>
-            </nav>
-          </header>
-
-          <main className="flex-grow flex flex-col items-center justify-center">
-            {children}
-          </main>
+      <body className={`${mavenPro.className} min-h-screen flex flex-col`}>
+        <Header />
+        <div className="flex flex-1 w-full">
+          <Sidebar />
+          <main className="flex-grow p-8">{children}</main>
         </div>
       </body>
     </html>
