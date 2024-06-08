@@ -1,7 +1,10 @@
 const Sidebar = () => {
   return (
     <aside className="w-64 text-white flex flex-col p-4 space-y-4 fixed h-full justify-end ">
-      <div className="mb-10" style={{ marginBottom: 200, paddingLeft: 64 }}>
+      <div
+        className="mb-10 pl-14"
+        style={{ marginBottom: 200, paddingLeft: 64 }}
+      >
         <a
           href="https://github.com/cagataycaliskan"
           target="_blank"
