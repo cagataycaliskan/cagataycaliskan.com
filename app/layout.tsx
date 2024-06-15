@@ -48,7 +48,7 @@ export default function RootLayout({
           <nav className="hidden lg:block">
             <ul className="flex space-x-10 mr-2 sm:mr-6">
               <HeaderLi href="/about">ABOUT ME</HeaderLi>
-              <HeaderLi href="/contact">CONTACT</HeaderLi>
+              <HeaderLi href="/contact">CONTACT ME</HeaderLi>
             </ul>
           </nav>
         </header>
