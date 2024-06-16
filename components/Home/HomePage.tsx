@@ -19,8 +19,8 @@ export default function HomePage() {
           {showWelcome && (
             <motion.div
               className="animated-text flex justify-center items-center absolute"
-              initial={{ y: "-30vh", opacity: 1 }}
-              animate={{ y: "-30vh", opacity: 0 }}
+              initial={{ y: "-20vh", opacity: 1 }}
+              animate={{ y: "-20vh", opacity: 0 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
             >
@@ -34,7 +34,7 @@ export default function HomePage() {
         <motion.div
           className="animated-text flex flex-col justify-center items-center"
           initial={{ y: "60vh", opacity: 0 }}
-          animate={{ y: "-20vh", opacity: 1 }}
+          animate={{ y: "-10vh", opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
           <div className="text-orange-400 font-medium text-center text-lg sm:text-2xl">
