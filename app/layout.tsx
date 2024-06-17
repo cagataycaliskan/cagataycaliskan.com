@@ -28,17 +28,17 @@ export default function RootLayout({
       <body className={`${mavenPro.className} min-h-screen flex flex-col`}>
         {/* Header */}
         <header className="w-full flex items-center justify-between p-8">
-          <div className="block lg:hidden">
+          <div className="block md:hidden">
             <Sidebar />
           </div>
 
-          <Link href="/" passHref legacyBehavior className="hidden lg:block">
-            <a className="text-orange-400 font-medium text-xl sm:text-2xl">
+          <Link href="/" passHref legacyBehavior>
+            <a className="hidden md:block text-orange-400 font-medium text-xl sm:text-2xl">
               Çağatay Çalışkan
             </a>
           </Link>
 
-          <nav className="hidden lg:block">
+          <nav className="hidden md:block">
             <ul className="flex space-x-10 mr-2 sm:mr-6">
               <HeaderLi href="/about">ABOUT ME</HeaderLi>
               <HeaderLi href="/contact">CONTACT ME</HeaderLi>
@@ -49,7 +49,7 @@ export default function RootLayout({
           {/* Sidebar */}
           <aside className="w-64 text-white flex flex-col p-4 space-y-4 fixed h-full justify-end ">
             <div
-              className="mb-10 pl-14 hidden lg:block"
+              className="mb-10 pl-14 hidden md:block"
               style={{ marginBottom: 200, paddingLeft: 64 }}
             >
               <a
