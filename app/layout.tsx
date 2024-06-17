@@ -48,10 +48,7 @@ export default function RootLayout({
         <div className="flex flex-1 w-full">
           {/* Sidebar */}
           <aside className="w-64 text-white flex flex-col p-4 space-y-4 fixed h-full justify-end ">
-            <div
-              className="mb-10 pl-14 hidden md:block"
-              style={{ marginBottom: 200, paddingLeft: 64 }}
-            >
+            <div className="mb-48 pl-4 lg:pl-8 xl:pl-16 hidden md:block">
               <a
                 href="https://github.com/cagataycaliskan"
                 target="_blank"
