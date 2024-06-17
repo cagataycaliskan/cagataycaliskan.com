@@ -31,7 +31,7 @@ const Sidebar: React.FC = () => {
     <>
       <div ref={sidebarRef} className={`sidebar ${isOpen ? "open" : ""}`}>
         <div className="sidebar-header">
-          <h1></h1>
+          <h1>Çağatay Çalışkan</h1>
         </div>
         <div className="sidebar-content">
           <HeaderLi href="/">HOME</HeaderLi>
@@ -72,6 +72,7 @@ const Sidebar: React.FC = () => {
       <div
         className={`sidebar-toggle ${isOpen ? "active" : ""}`}
         onClick={toggleSidebar}
+        onTouchStart={toggleSidebar}
       >
         <svg
           width="24"
