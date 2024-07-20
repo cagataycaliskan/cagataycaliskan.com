@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import "./Sidebar.css";
-import HeaderLi from "@/utils/HeaderLi";
+import HeaderLi from "../../utils/HeaderLi";
 
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
