@@ -10,7 +10,9 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY public ./public
-COPY src ./src
+COPY app ./app
+COPY utils ./utils
+COPY components ./components
 COPY package.json next.config.mjs postcss.config.mjs tailwind.config.ts ./
 RUN npm run build
 
