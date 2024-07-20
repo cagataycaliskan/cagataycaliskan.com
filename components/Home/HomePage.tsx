@@ -46,6 +46,14 @@ export default function HomePage() {
             tasks in the best possible way in the projects I work on. My goal is
             to be a lifetime learner and to create successful projects.
           </div>
+
+          <div className="text-orange-400 font-medium text-center text-xl sm:text-3xl mt-8">
+            Technologies I Use
+          </div>
+
+          <div className="text-orange-400 font-medium text-center text-lg sm:text-2xl mt-2">
+            JavaScript - React - Next.js
+          </div>
         </motion.div>
       </div>
     </>
