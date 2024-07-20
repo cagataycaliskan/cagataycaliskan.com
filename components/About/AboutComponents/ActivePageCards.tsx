@@ -24,6 +24,7 @@ function ActivePageCards() {
       <div className="reusable-card-container">
         {myCertificates.map((certificate) => (
           <ReusableCard
+            key={certificate.certificateName}
             text={certificate.certificateName}
             imageUrl={certificate.imageurl}
             linkUrl={certificate.certificateUrl}
