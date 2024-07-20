@@ -34,17 +34,17 @@ export default function HomePage() {
         <motion.div
           className="animated-text flex flex-col justify-center items-center"
           initial={{ y: "60vh", opacity: 0 }}
-          animate={{ y: "-10vh", opacity: 1 }}
+          animate={{ y: "0vh", opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
           <div className="text-orange-400 font-medium text-center text-lg sm:text-2xl">
-            MY NAME IS
-          </div>
-          <div className="text-orange-400 font-medium text-center my-3 text-2xl sm:text-4xl">
-            ÇAĞATAY ÇALIŞKAN
-          </div>
-          <div className="text-orange-400 font-medium text-center text-lg sm:text-2xl">
-            I AM A FRONT-END DEVELOPER
+            My name is Çağatay Çalışkan and I am a Front-end Developer. I was
+            born in Turkey at 1998. I studied Aviation Management. Despite not
+            having a degree in a software-related field, I have a keen interest
+            in software development and I am progressing in the software
+            industry. I love learning new technologies. I strive to deliver my
+            tasks in the best possible way in the projects I work on. My goal is
+            to be a lifetime learner and to create successful projects.
           </div>
         </motion.div>
       </div>
