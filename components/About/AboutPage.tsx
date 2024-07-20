@@ -1,5 +1,5 @@
 import React from "react";
-// import ActivePageCards from "./AboutComponents/ActivePageCards";
+import ActivePageCards from "./AboutComponents/ActivePageCards";
 function AboutPage() {
   return (
     <>
@@ -12,9 +12,11 @@ function AboutPage() {
           to be a lifetime learner and to create successful projects.
         </div>
 
-        {/* <div>
+        <div className="mt-12">My Certificates</div>
+
+        <div>
           <ActivePageCards />
-        </div> */}
+        </div>
       </div>
     </>
   );
