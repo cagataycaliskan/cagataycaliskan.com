@@ -30,8 +30,19 @@
 }
 
 .modal-image {
-  max-width: 800px;
-  width: auto;
+  max-width: 100%;
   height: auto;
   cursor: pointer;
+}
+
+@media (min-width: 350px) and (max-width: 900px) {
+  .modal-image {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 900px) {
+  .modal-image {
+    width: 800px;
+  }
 }
