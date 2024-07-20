@@ -3,19 +3,19 @@ import React from "react";
 import ReusableCard from "./ReusableCard";
 
 function ActivePageCards() {
-  const handleClick = (url: string) => {
-    window.open(url, "_blank");
-  };
-
   const myCertificates = [
     {
       certificateName: "The Ultimate React Course 2024: React, Redux & More",
       certificateUrl: "https://ude.my/UC-a32a2086-9fac-44da-90ba-147073bce8ae",
+      imageurl:
+        "https://udemy-certificate.s3.amazonaws.com/image/UC-a32a2086-9fac-44da-90ba-147073bce8ae.jpg?v=1715675488000",
     },
     {
       certificateName: "The Modern Javascript Bootcamp Course",
       certificateUrl:
         "https://www.udemy.com/certificate/UC-db2e4c83-0a2f-4089-af85-2eca28a10285/",
+      imageurl:
+        "https://udemy-certificate.s3.amazonaws.com/image/UC-db2e4c83-0a2f-4089-af85-2eca28a10285.jpg?v=1679665277000",
     },
   ];
 
@@ -25,7 +25,8 @@ function ActivePageCards() {
         {myCertificates.map((certificate) => (
           <ReusableCard
             text={certificate.certificateName}
-            onClick={() => handleClick(certificate.certificateUrl)}
+            imageUrl={certificate.imageurl}
+            linkUrl={certificate.certificateUrl}
           />
         ))}
       </div>
