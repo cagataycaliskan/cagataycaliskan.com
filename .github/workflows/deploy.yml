@@ -25,6 +25,6 @@ jobs:
           docker build ./ -t cagataycaliskan.com
           docker stop cagataycaliskan.com &> /dev/null
           docker rm cagataycaliskan.com &> /dev/null
-          docker run -d -p 172.17.0.1:3333:3000 \
+          docker run -d -p 172.17.0.1:3334:3000 \
             --name cagataycaliskan.com cagataycaliskan.com
           EOF
