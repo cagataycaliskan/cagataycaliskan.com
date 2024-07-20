@@ -1,0 +1,30 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.MCSRK }}
+
+      - name: Build and Deploy Docker Image
+        run: |
+          ssh -o StrictHostKeyChecking=no root@${{ secrets.MCSRIP }} << 'EOF'
+          cd /root/self/cagataycaliskan.com
+          git pull https://@github.com/cagataycaliskan/cagataycaliskan.com.git
+          docker build ./ -t cagataycaliskan.com
+          docker stop cagataycaliskan.com &> /dev/null
+          docker rm cagataycaliskan.com &> /dev/null
+          docker run -d -p 172.17.0.1:3333:3000 \
+            --name cagataycaliskan.com cagataycaliskan.com
+          EOF
