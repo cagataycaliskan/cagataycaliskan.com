@@ -47,7 +47,7 @@ export default function RootLayout({
         </header>
         <div className="flex flex-1 w-full">
           {/* Sidebar */}
-          <aside className="w-64 text-white flex flex-col p-4 space-y-4 fixed h-full justify-end ">
+          {/* <aside className="w-64 text-white flex flex-col p-4 space-y-4 fixed h-full justify-end ">
             <div className="mb-48 pl-4 lg:pl-8 xl:pl-16 hidden md:block">
               <a
                 href="https://github.com/cagataycaliskan"
@@ -78,7 +78,7 @@ export default function RootLayout({
                 </svg>
               </a>
             </div>
-          </aside>
+          </aside> */}
 
           <main className="flex-grow p-8">{children}</main>
         </div>
