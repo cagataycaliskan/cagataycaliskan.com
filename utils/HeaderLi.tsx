@@ -15,7 +15,7 @@ function HeaderLi({
     <li>
       <Link href={href} passHref legacyBehavior>
         <a
-          className={`text-white hover:text-orange-400 font-medium ${
+          className={`text-orange-400 hover:text-orange-400 font-medium ${
             pathname === href ? "active-link" : ""
           }`}
         >
