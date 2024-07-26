@@ -22,7 +22,7 @@ export default function HomePage() {
               initial={{ y: "-20vh", opacity: 1 }}
               animate={{ y: "-20vh", opacity: 0 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
+              transition={{ duration: 1.7, ease: "easeOut" }}
             >
               <div className="text-orange-400 font-medium text-center text-3xl sm:text-4xl">
                 WELCOME
@@ -35,7 +35,7 @@ export default function HomePage() {
           className="animated-text flex flex-col justify-center items-center"
           initial={{ y: "60vh", opacity: 0 }}
           animate={{ y: "0vh", opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
+          transition={{ duration: 2, ease: "easeOut" }}
         >
           <div className="text-orange-400 font-medium text-center text-lg sm:text-2xl">
             My name is Çağatay Çalışkan and I am a Front-end Developer. I was
