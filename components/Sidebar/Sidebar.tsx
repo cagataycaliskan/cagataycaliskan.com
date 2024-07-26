@@ -2,8 +2,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Sidebar.css";
 import HeaderLi from "../../utils/HeaderLi";
+interface SidebarProps {
+  lang: string;
+}
 
-const Sidebar: React.FC = () => {
+const Sidebar: React.FC<SidebarProps> = ({ lang }) => {
   const [isOpen, setIsOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
@@ -34,9 +37,9 @@ const Sidebar: React.FC = () => {
           <h1>Çağatay Çalışkan</h1>
         </div>
         <div className="sidebar-content">
-          <HeaderLi href="/">HOME</HeaderLi>
-          <HeaderLi href="/about">ABOUT ME</HeaderLi>
-          <HeaderLi href="/contact">CONTACT ME</HeaderLi>
+          <HeaderLi href={`/${lang}/`}>HOME</HeaderLi>
+          <HeaderLi href={`/${lang}/about`}>ABOUT ME</HeaderLi>
+          <HeaderLi href={`/${lang}/contact`}>CONTACT ME</HeaderLi>
         </div>
       </div>
 

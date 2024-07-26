@@ -1,6 +1,12 @@
 import React from "react";
 
-function ContactPage() {
+interface ContactPageProps {
+  lang: string;
+  translations: {
+    [key: string]: string;
+  };
+}
+const ContactPage: React.FC<ContactPageProps> = ({ lang, translations }) => {
   return (
     <>
       <div className="container text-orange-400 contact-page">
@@ -52,6 +58,6 @@ function ContactPage() {
       </div>
     </>
   );
-}
+};
 
 export default ContactPage;

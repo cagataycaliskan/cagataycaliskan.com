@@ -2,7 +2,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
-export default function HomePage() {
+interface HomePageProps {
+  lang: string;
+}
+
+const HomePage: React.FC<HomePageProps> = ({ lang }) => {
   const [showWelcome, setShowWelcome] = useState(true);
 
   useEffect(() => {
@@ -58,4 +62,5 @@ export default function HomePage() {
       </div>
     </>
   );
-}
+};
+export default HomePage;
