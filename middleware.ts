@@ -15,8 +15,9 @@ export function middleware(request: NextRequest) {
     !pathname.startsWith("/static") &&
     !pathname.startsWith("/styles")
   ) {
-    request.nextUrl.pathname = "/en";
-    return NextResponse.redirect(request.nextUrl);
+    const url = request.nextUrl.clone();
+    url.pathname = "/en";
+    return NextResponse.redirect(url);
   }
 
   return NextResponse.next();
