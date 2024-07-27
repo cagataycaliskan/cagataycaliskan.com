@@ -50,8 +50,13 @@ export default function RootLayout({
 
           <nav className="hidden md:block">
             <ul className="flex space-x-10 mr-2 sm:mr-6">
-              <HeaderLi href={`/${lang}/about`}>ABOUT ME</HeaderLi>
-              <HeaderLi href={`/${lang}/contact`}>CONTACT ME</HeaderLi>
+              <HeaderLi href={`/${lang}/about`}>
+                {" "}
+                {/* {translations.aboutMe} */}
+              </HeaderLi>
+              <HeaderLi href={`/${lang}/contact`}>
+                a{/* a{translations.contactMe} */}
+              </HeaderLi>
             </ul>
           </nav>
         </header>
