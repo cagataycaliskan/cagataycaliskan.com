@@ -20,6 +20,13 @@ export default function RootLayout({
   params: { lang: string };
 }) {
   const { lang } = params;
+  const supportedLanguages = ["en", "tr"];
+
+  if (!supportedLanguages.includes(lang)) {
+    if (typeof window !== "undefined") {
+      window.location.href = "/en";
+    }
+  }
 
   return (
     <html lang={lang}>
