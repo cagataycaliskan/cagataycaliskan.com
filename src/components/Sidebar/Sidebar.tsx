@@ -2,8 +2,21 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Sidebar.css";
 import HeaderLi from "../../utils/HeaderLi";
+import LocalSwitcher from "../local-switcher";
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+  locale: string;
+  translations: {
+    homePage: string;
+    aboutMe: string;
+    contactMe: string;
+  };
+}
+
+export default function Sidebar({
+  locale,
+  translations,
+}: Readonly<SidebarProps>) {
   const [isOpen, setIsOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
@@ -34,9 +47,15 @@ const Sidebar: React.FC = () => {
           <h1>Çağatay Çalışkan</h1>
         </div>
         <div className="sidebar-content">
-          <HeaderLi href="/">HOME</HeaderLi>
-          <HeaderLi href="/about">ABOUT ME</HeaderLi>
-          <HeaderLi href="/contact">CONTACT ME</HeaderLi>
+          <HeaderLi href={`/${locale}`}>{translations.homePage}</HeaderLi>
+          <HeaderLi href={`/${locale}/about`}>{translations.aboutMe}</HeaderLi>
+          <HeaderLi href={`/${locale}/contact`}>
+            {translations.contactMe}
+          </HeaderLi>
+        </div>
+
+        <div className="sidebar-footer">
+          <LocalSwitcher />
         </div>
       </div>
 
@@ -57,6 +76,4 @@ const Sidebar: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default Sidebar;
+}
