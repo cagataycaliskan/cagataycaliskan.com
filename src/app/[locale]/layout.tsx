@@ -49,7 +49,7 @@ export default function RootLayout({
 
           <Link href={`/${locale}`} passHref legacyBehavior>
             <a className="hidden md:block text-orange-400 font-medium text-xl sm:text-2xl">
-              Çağatay Çalışkann
+              Çağatay Çalışkan
             </a>
           </Link>
 
