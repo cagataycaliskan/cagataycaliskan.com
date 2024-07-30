@@ -2,7 +2,15 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
-export default function HomePage() {
+interface HomePageProps {
+  translations: {
+    welcomeUC: string;
+    welcomeText: string;
+    technologiesIUse: string;
+  };
+}
+
+const HomePage: React.FC<HomePageProps> = ({ translations }) => {
   const [showWelcome, setShowWelcome] = useState(true);
 
   useEffect(() => {
@@ -25,7 +33,7 @@ export default function HomePage() {
               transition={{ duration: 1.7, ease: "easeOut" }}
             >
               <div className="text-orange-400 font-medium text-center text-3xl sm:text-4xl">
-                WELCOME
+                {translations?.welcomeUC}
               </div>
             </motion.div>
           )}
@@ -38,17 +46,11 @@ export default function HomePage() {
           transition={{ duration: 2, ease: "easeOut" }}
         >
           <div className="text-orange-400 font-medium text-center text-lg sm:text-2xl">
-            My name is Çağatay Çalışkan and I am a Front-end Developer. I was
-            born in Turkey at 1998. I studied Aviation Management. Despite not
-            having a degree in a software-related field, I have a keen interest
-            in software development and I am progressing in the software
-            industry. I love learning new technologies. I strive to deliver my
-            tasks in the best possible way in the projects I work on. My goal is
-            to be a lifetime learner and to create successful projects.
+            {translations?.welcomeText}
           </div>
 
           <div className="text-orange-400 font-medium text-center text-xl sm:text-3xl mt-8">
-            Technologies I Use
+            {translations?.technologiesIUse}
           </div>
 
           <div className="text-orange-400 font-medium text-center text-lg sm:text-2xl mt-2">
@@ -58,4 +60,6 @@ export default function HomePage() {
       </div>
     </>
   );
-}
+};
+
+export default HomePage;
