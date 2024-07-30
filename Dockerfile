@@ -11,7 +11,7 @@ COPY public ./public
 COPY src ./src
 COPY messages ./messages
 COPY .env* ./
-COPY next.config.mjs postcss.config.mjs tailwind.config.ts ./
+COPY package.json next.config.mjs postcss.config.mjs tailwind.config.ts ./
 RUN npm run build
 
 FROM node:20-alpine
