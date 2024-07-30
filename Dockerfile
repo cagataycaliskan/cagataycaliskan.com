@@ -10,7 +10,6 @@ COPY --from=deps /src/node_modules ./node_modules
 COPY public ./public
 COPY src ./src
 COPY messages ./messages
-COPY .env* ./
 COPY package.json next.config.mjs postcss.config.mjs tailwind.config.ts ./
 RUN npm run build
 
