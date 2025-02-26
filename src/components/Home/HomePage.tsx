@@ -54,7 +54,7 @@ const HomePage: React.FC<HomePageProps> = ({ translations }) => {
           </div>
 
           <div className="text-orange-400 font-medium text-center text-lg sm:text-2xl mt-2">
-            JavaScript - React - Next.js
+            JavaScript - React - Next.js - Flutter
           </div>
         </motion.div>
       </div>

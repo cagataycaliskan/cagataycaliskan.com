@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Image from "next/image";
 import "./ModalStyle.css";
 
 interface ModalProps {
@@ -14,13 +15,11 @@ const Modal: React.FC<ModalProps> = ({
   imageUrl,
   linkUrl,
 }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   if (!isOpen) {
     return null;
   }
-
-  const handleImageClick = () => {
-    window.open(linkUrl, "_blank");
-  };
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -28,12 +27,18 @@ const Modal: React.FC<ModalProps> = ({
         <span className="close-button" onClick={onClose}>
           &times;
         </span>
-        <img
-          src={imageUrl}
-          alt="Modal"
-          onClick={handleImageClick}
-          className="modal-image"
-        />
+        {isLoading && <div className="loading-spinner"></div>}
+        <div onClick={() => window.open(linkUrl, "_blank")} style={{ cursor: 'pointer' }}>
+          <Image
+            src={imageUrl}
+            alt="Certificate"
+            width={800}
+            height={600}
+            className="modal-image"
+            onLoadingComplete={() => setIsLoading(false)}
+            priority
+          />
+        </div>
       </div>
     </div>
   );

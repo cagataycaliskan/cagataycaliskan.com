@@ -55,10 +55,10 @@ export default function RootLayout({
 
           <nav className="hidden md:block">
             <ul className="flex space-x-10 mr-2 sm:mr-6">
-              <LocalSwitcher />
               <HeaderLi href={`/${locale}/about`}>{t("aboutMe")}</HeaderLi>
               <HeaderLi href={`/${locale}/contact`}>{t("contactMe")}</HeaderLi>
-            </ul>
+              <LocalSwitcher />
+              </ul>
           </nav>
         </header>
         <div className="flex flex-1 w-full">

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import ReusableCard from "./ReusableCard";
+import useImagePreloader from "./hooks/useImagePreloader";
 
 function ActivePageCards() {
   const myCertificates = [
@@ -25,6 +26,8 @@ function ActivePageCards() {
         "https://udemy-certificate.s3.amazonaws.com/image/UC-6a05c8fe-59fe-4808-8c71-24507ad425bb.jpg?v=1726752175000",
     },
   ];
+
+  useImagePreloader(myCertificates.map(cert => cert.imageurl));
 
   return (
     <>
