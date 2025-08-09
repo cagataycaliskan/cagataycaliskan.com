@@ -2,34 +2,96 @@
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useTransition } from "react";
+import { Select, type SelectOption } from "@/components/ui/Select";
+
+const languageOptions: SelectOption[] = [
+  {
+    value: "tr",
+    label: "Türkçe",
+    icon: (
+      <div className="w-6 h-6 rounded overflow-hidden">
+        <svg viewBox="0 0 64 64" className="w-full h-full">
+          <circle cx="32" cy="32" r="30" fill="#ed4c5c"/>
+          <g fill="#ffffff">
+            <path d="M41.3 39l.1-5.4L36 32l5.4-1.6l-.1-5.4l3.3 4.3l5.4-1.6l-3.3 4.3l3.3 4.3l-5.4-1.6z"/>
+            <path d="M33.2 44c-6.6 0-11.9-5.4-11.9-12s5.3-12 11.9-12c2.5 0 4.8.8 6.8 2.1C37.3 19 33.3 17 28.8 17C20.6 17 14 23.7 14 32s6.6 15 14.8 15c4.5 0 8.5-2 11.2-5.1c-1.9 1.3-4.2 2.1-6.8 2.1"/>
+          </g>
+        </svg>
+      </div>
+    )
+  },
+  {
+    value: "en", 
+    label: "English",
+    icon: (
+      <div className="w-6 h-6 rounded overflow-hidden">
+        <svg viewBox="0 0 64 64" className="w-full h-full">
+          <g fill="#2a5f9e">
+            <path d="M22 60.3V46.5l-10.3 7.6c2.9 2.7 6.4 4.8 10.3 6.2"/>
+            <path d="M42 60.3c3.9-1.4 7.4-3.5 10.3-6.2L42 46.4v13.9"/>
+            <path d="M3.7 42c.3 1 .7 1.9 1.2 2.9L8.8 42H3.7"/>
+            <path d="M55.2 42l3.9 2.9c.4-.9.8-1.9 1.2-2.9h-5.1"/>
+          </g>
+          <g fill="#ffffff">
+            <path d="M23.5 38H2.6c.3 1.4.7 2.7 1.1 4h5.1l-3.9 2.9c.8 1.7 1.7 3.2 2.8 4.7L18 42h4v2l-11.7 8.6l1.4 1.4L22 46.5v13.8c1.3.5 2.6.8 4 1.1V38h-2.5"/>
+            <path d="M61.4 38H38v23.4c1.4-.3 2.7-.7 4-1.1V46.5L52.3 54c1.4-1.3 2.6-2.7 3.8-4.2L45.4 42h6.8l6.1 4.5c.3-.5.6-1.1.8-1.6L55.2 42h5.1c.4-1.3.8-2.6 1.1-4"/>
+          </g>
+          <g fill="#ed4c5c">
+            <path d="M7.7 49.6c.8 1.1 1.6 2.1 2.5 3.1L22 44.1v-2h-4L7.7 49.6"/>
+            <path d="M45.5 42l10.7 7.8c.4-.5.7-1 1.1-1.5c.1-.1.1-.2.2-.2c.3-.5.7-1.1 1-1.6L52.2 42h-6.7"/>
+          </g>
+          <g fill="#2a5f9e">
+            <path d="M42 3.7v13.8l10.3-7.6C49.4 7.2 45.9 5.1 42 3.7"/>
+            <path d="M22 3.7c-3.9 1.4-7.4 3.5-10.3 6.2L22 17.6V3.7"/>
+            <path d="M60.3 22c-.3-1-.7-1.9-1.2-2.9L55.2 22h5.1"/>
+            <path d="M8.8 22l-3.9-2.9c-.4 1-.8 1.9-1.2 2.9h5.1"/>
+          </g>
+          <g fill="#ffffff">
+            <path d="M40.5 26h20.8c-.3-1.4-.7-2.7-1.1-4h-5.1l3.9-2.9c-.8-1.7-1.7-3.2-2.8-4.7L46 22h-4v-2l11.7-8.6l-1.4-1.4L42 17.5V3.7c-1.3-.5-2.6-.8-4-1.1V26h2.5"/>
+            <path d="M2.6 26H26V2.6c-1.4.3-2.7.7-4 1.1v13.8L11.7 10c-1.4 1.3-2.6 2.7-3.8 4.2L18.6 22h-6.8l-6.1-4.5c-.3.5-.6 1.1-.8 1.6L8.8 22H3.7c-.4 1.3-.8 2.6-1.1 4"/>
+          </g>
+          <g fill="#ed4c5c">
+            <path d="M56.3 14.4c-.8-1.1-1.6-2.1-2.5-3.1L42 19.9v2h4l10.3-7.5"/>
+            <path d="M18.5 22L7.9 14.2c-.4.5-.7 1-1.1 1.5c-.1.1-.1.2-.2.2c-.3.5-.7 1.1-1 1.6l6.1 4.5h6.8"/>
+            <path d="M61.4 26H38V2.6c-1.9-.4-3.9-.6-6-.6s-4.1.2-6 .6V26H2.6c-.4 1.9-.6 3.9-.6 6s.2 4.1.6 6H26v23.4c1.9.4 3.9.6 6 .6s4.1-.2 6-.6V38h23.4c.4-1.9.6-3.9.6-6s-.2-4.1-.6-6"/>
+          </g>
+        </svg>
+      </div>
+    )
+  }
+];
 
 export default function LocalSwitcher() {
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
   const localActive = useLocale();
 
-  const handleToggle = () => {
-    const nextLocale = localActive === "en" ? "tr" : "en";
-    startTransition(() => {
-      router.replace(`/${nextLocale}`);
-    });
+  const handleLanguageChange = (value: string) => {
+    if (value !== localActive) {
+      startTransition(() => {
+        router.replace(`/${value}`);
+      });
+    }
   };
 
   return (
-    <div
-      onClick={handleToggle}
-      className={`relative border-2 rounded-full bg-black p-1 cursor-pointer flex items-center ${
-        isPending ? "opacity-50 cursor-not-allowed" : ""
-      }`}
-      style={{ width: "70px", height: "35px" }}
-    >
-      <div
-        className={`rounded-full bg-orange-400 w-1/2 h-full transition-transform duration-300 ${
-          localActive === "en" ? "transform translate-x-full" : ""
-        }`}
-      ></div>
-      <div className="absolute left-2 text-white">TR</div>
-      <div className="absolute right-2 text-white">EN</div>
+    <div className="relative">
+      <Select
+        options={languageOptions}
+        value={localActive}
+        onValueChange={handleLanguageChange}
+        disabled={isPending}
+        size="sm"
+        className="w-36"
+      />
+      {isPending && (
+        <div className="absolute inset-0 flex items-center justify-center bg-white/50 dark:bg-gray-800/50 rounded-lg">
+          <svg className="animate-spin h-4 w-4 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
+          </svg>
+        </div>
+      )}
     </div>
   );
 }

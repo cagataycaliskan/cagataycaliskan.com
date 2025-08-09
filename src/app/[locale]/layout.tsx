@@ -3,11 +3,25 @@ import "./globals.css";
 import LocalSwitcher from "../../components/local-switcher";
 import HeaderLi from "../../utils/HeaderLi";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import { Maven_Pro } from "next/font/google";
+import { ThemeProvider } from "../../components/providers/ThemeProvider";
+import { ThemeToggle } from "../../components/ui/ThemeToggle";
+import Footer from "../../components/layout/Footer";
+import { Inter, Space_Grotesk } from "next/font/google";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 
-const mavenPro = Maven_Pro({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter"
+});
+
+const spaceGrotesk = Space_Grotesk({ 
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-space-grotesk"
+});
 
 export const metadata: Metadata = {
   title: "Çağatay Çalışkan",
@@ -21,49 +35,87 @@ interface RootLayoutProps {
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: { locale },
 }: Readonly<RootLayoutProps>) {
-  const t = useTranslations();
+  // Get messages for the client
+  let messages;
+  try {
+    messages = (await import(`../../../messages/${locale}.json`)).default;
+  } catch (error) {
+    messages = (await import(`../../../messages/en.json`)).default;
+  }
+
+  const t = await getTranslations();
 
   const translations = {
     homePage: t("homePage"),
-    aboutMe: t("aboutMe"),
-    contactMe: t("contactMe"),
   };
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <link
           rel="icon"
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2214%22>💻</text></svg>"
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('theme') || 'dark';
+                  var resolvedTheme = theme;
+                  if (theme === 'system') {
+                    resolvedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                  }
+                  document.documentElement.classList.add(resolvedTheme);
+                } catch (e) {
+                  document.documentElement.classList.add('dark');
+                }
+              })();
+            `,
+          }}
+        />
       </head>
-      <body className={`${mavenPro.className} min-h-screen flex flex-col`}>
-        <header className="w-full flex items-center justify-between p-8">
-          <div className="block md:hidden">
-            <Sidebar locale={locale} translations={translations} />
+      <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 dark:from-gray-900 dark:via-gray-900 dark:to-slate-900 text-black dark:text-white`} suppressHydrationWarning>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ThemeProvider attribute="class" defaultTheme="dark">
+          <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-gradient-to-r from-slate-50/90 to-blue-50/90 dark:from-gray-900/90 dark:to-slate-900/90 border-b border-gray-200/50 dark:border-gray-700/50 shadow-sm">
+            <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
+              {/* Logo - Always Left */}
+              <Link href={`/${locale}`} passHref legacyBehavior>
+                <a className="group flex items-center space-x-3">
+                  <div className="w-8 h-8 md:w-8 md:h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
+                    CC
+                  </div>
+                  <span className="gradient-text font-display font-bold text-base md:text-xl group-hover:scale-105 transition-transform duration-200">
+                    Çağatay Çalışkan
+                  </span>
+                </a>
+              </Link>
+
+              {/* Desktop Navigation */}
+              <nav className="hidden md:block">
+                <ul className="flex items-center space-x-6">
+                  <li><ThemeToggle /></li>
+                  <li><LocalSwitcher /></li>
+                </ul>
+              </nav>
+
+              {/* Mobile Navigation */}
+              <div className="block md:hidden">
+                <Sidebar locale={locale} translations={translations} />
+              </div>
+            </div>
+          </header>
+          <div className="flex flex-1 w-full">
+            <main className="flex-grow min-h-[calc(100vh-theme(spacing.20)-theme(spacing.16))]">{children}</main>
           </div>
-
-          <Link href={`/${locale}`} passHref legacyBehavior>
-            <a className="hidden md:block text-orange-400 font-medium text-xl sm:text-2xl">
-              Çağatay Çalışkan
-            </a>
-          </Link>
-
-          <nav className="hidden md:block">
-            <ul className="flex space-x-10 mr-2 sm:mr-6">
-              <HeaderLi href={`/${locale}/about`}>{t("aboutMe")}</HeaderLi>
-              <HeaderLi href={`/${locale}/contact`}>{t("contactMe")}</HeaderLi>
-              <LocalSwitcher />
-              </ul>
-          </nav>
-        </header>
-        <div className="flex flex-1 w-full">
-          <main className="flex-grow p-8">{children}</main>
-        </div>
+            <Footer locale={locale} translations={translations} />
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
