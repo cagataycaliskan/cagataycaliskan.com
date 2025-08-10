@@ -1,6 +1,6 @@
 {
   "welcomeUC": "HOŞ GELDİNİZ",
-  "welcomeText": "Benim adım Çağatay Çalışkan, Front-end Developer olarak çalışıyorum. 1998 yılında Türkiye'de doğdum ve Anadolu Üniversitesi Havacılık Yönetimi bölümünden mezun oldum. Yazılım geliştirmeye büyük bir tutku duyuyor, yeni teknolojileri öğrenmekten keyif alıyorum. Çalıştığım projelerde en iyi çözümleri üretmeye odaklanarak, kullanıcı deneyimini ve performansı ön planda tutuyorum. Sürekli gelişime inanıyor ve güçlü, yenilikçi projeler oluşturmaya devam ediyorum.",
+  "welcomeText": "Ben Çağatay Çalışkan, modern web ve mobil uygulamalar geliştiren bir Front-end Developer'ım. React ve Next.js ile ölçeklenebilir web projeleri, Flutter ile yüksek performanslı mobil uygulamalar üretiyorum. Kullanıcı deneyimi, performans optimizasyonu ve temiz kod prensiplerine odaklanarak projelerimi geliştiriyorum. Bir yandan backend teknolojilerini öğrenerek uçtan uca çözüm üretebilen full stack bir geliştirici olma yolunda ilerliyorum. Teknolojiyi yalnızca bir araç olarak değil, insan hayatını kolaylaştıran ve değer katan bir alan olarak görüyorum. Amacım, güçlü ve yenilikçi projelerle dijital deneyimleri en üst seviyeye taşımak.",
   "technologiesIUse": "Kullandığım Teknolojiler",
   "homePage": "ANA SAYFA",
   "myCertificates": "Sertifikalarım",
@@ -73,5 +73,8 @@
     "work": "İş",
     "enterprise": "Kurumsal",
     "sideProject": "Yan Proje"
+  },
+  "metadata": {
+    "description": "Çağatay Çalışkan - React, TypeScript, Next.js konularında uzmanlaşmış Frontend Developer. Modern web uygulamaları geliştirme, kullanıcı deneyimi ve performans odaklı çalışmalar."
   }
 }

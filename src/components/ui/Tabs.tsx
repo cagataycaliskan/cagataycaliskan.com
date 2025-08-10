@@ -79,7 +79,7 @@ const TabsTrigger = React.forwardRef<
           "rounded-full border-2 transition-all duration-200": variant === "pills",
           "border-accent-blue bg-accent-blue text-white shadow-glow": 
             variant === "pills" && isActive,
-          "border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:border-accent-blue hover:text-accent-blue": 
+          "border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-200 hover:border-accent-blue hover:text-gray-900 dark:hover:text-white": 
             variant === "pills" && !isActive,
           "hover:bg-accent-blue hover:text-white": variant === "pills" && isActive,
         },

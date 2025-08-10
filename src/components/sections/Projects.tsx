@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { projectsData, type Project } from '@/lib/constants';
@@ -58,6 +58,9 @@ function ProjectModal({ project, onClose, translations }: ProjectModalProps) {
             width={640}
             height={480}
             className="w-full h-96 object-cover rounded-t-xl"
+            quality={80}
+            sizes="(max-width: 768px) 100vw, 640px"
+            loading="lazy"
           />
           <button
             onClick={onClose}
@@ -170,7 +173,7 @@ interface ProjectsProps {
   };
 }
 
-export default function Projects({ translations }: ProjectsProps) {
+const Projects = memo(function Projects({ translations }: ProjectsProps) {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [activeFilter, setActiveFilter] = useState<string>('all');
 
@@ -210,6 +213,7 @@ export default function Projects({ translations }: ProjectsProps) {
 
   return (
     <div className="w-full">
+      <h2 className="sr-only">Projects Portfolio</h2>
       {/* Filter Buttons */}
       <div className="mb-8">
         <div className="flex flex-wrap gap-2 justify-center">
@@ -250,6 +254,9 @@ export default function Projects({ translations }: ProjectsProps) {
                     width={400}
                     height={300}
                     className="w-full h-full object-contain rounded-t-lg"
+                    quality={75}
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    loading="lazy"
                   />
                   
                   {project.featured && (
@@ -311,4 +318,6 @@ export default function Projects({ translations }: ProjectsProps) {
       </AnimatePresence>
     </div>
   );
-}
+});
+
+export default Projects;

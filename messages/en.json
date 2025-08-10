@@ -1,6 +1,6 @@
 {
   "welcomeUC": "WELCOME",
-  "welcomeText": "My name is Çağatay Çalışkan, and I work as a Front-end Developer. I was born in Turkey in 1998 and graduated from Anadolu University with a degree in Aviation Management. I have a strong passion for software development and enjoy learning new technologies. I focus on delivering the best solutions in the projects I work on, prioritizing user experience and performance. I believe in continuous learning and strive to create innovative and impactful projects.",
+  "welcomeText": "I'm Çağatay Çalışkan, a Front-end Developer who creates modern web and mobile applications. I develop scalable web projects with React and Next.js, and high-performance mobile apps with Flutter. I focus on user experience, performance optimization, and clean code principles while developing my projects. Meanwhile, I'm progressing towards becoming a full-stack developer who can produce end-to-end solutions by learning backend technologies. I see technology not just as a tool, but as a field that makes human life easier and adds value. My goal is to elevate digital experiences to the highest level with powerful and innovative projects.",
   "technologiesIUse": "Technologies I Use",
   "homePage": "HOMEPAGE",
   "myCertificates": "My Certificates",
@@ -73,5 +73,8 @@
     "work": "Work",
     "enterprise": "Enterprise",
     "sideProject": "Side Project"
+  },
+  "metadata": {
+    "description": "Çağatay Çalışkan - Frontend Developer specializing in React, TypeScript, Next.js. Building modern web applications with focus on user experience and performance."
   }
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 import { createPortal } from 'react-dom';
 import { certificatesData, type Certificate } from '@/lib/constants';
 import { Card } from '@/components/ui/Card';
@@ -43,9 +43,9 @@ function CertificateLightbox({ certificate, onClose }: CertificateLightboxProps)
             width={800}
             height={600}
             className="w-full h-full object-contain rounded-lg shadow-2xl"
-            quality={95}
+            quality={85}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
-            priority
+            loading="eager"
           />
         </div>
         
@@ -84,7 +84,7 @@ function CertificateLightbox({ certificate, onClose }: CertificateLightboxProps)
   return createPortal(lightboxContent, document.body);
 }
 
-export default function Certificates() {
+const Certificates = memo(function Certificates() {
   const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
 
   // Actual certificates data
@@ -141,6 +141,7 @@ export default function Certificates() {
 
   return (
     <div className="w-full max-w-full">
+      <h2 className="sr-only">Certificates and Achievements</h2>
       {/* Grid Layout */}
       <motion.div
         variants={containerVariants}
@@ -163,9 +164,12 @@ export default function Certificates() {
                   width={400}
                   height={300}
                   className="w-full h-full object-cover rounded-t-lg"
-                  quality={90}
+                  quality={75}
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  priority={index < 3}
+                  priority={index < 2}
+                  loading={index < 2 ? 'eager' : 'lazy'}
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 />
                 {/* Verification Badge */}
                 {certificate.verificationUrl && (
@@ -241,4 +245,6 @@ export default function Certificates() {
       )}
     </div>
   );
-}
+});
+
+export default Certificates;

@@ -137,6 +137,7 @@ export default function TechStack() {
 
   return (
     <div ref={sectionRef} className="w-full space-y-6">
+      <h2 className="sr-only">Technical Skills and Technologies</h2>
       {/* Categories Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {techStackData.map((category, index) => (

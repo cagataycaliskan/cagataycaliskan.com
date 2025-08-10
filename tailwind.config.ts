@@ -35,12 +35,12 @@ const config: Config = {
           tertiary: '#e9ecef',
         },
         accent: {
-          blue: '#667eea',
-          purple: '#764ba2',
-          pink: '#f093fb',
-          red: '#f5576c',
-          cyan: '#4facfe',
-          teal: '#00f2fe',
+          blue: '#3b82f6', // More contrasted blue (blue-500)
+          purple: '#7c3aed', // More contrasted purple (violet-600)
+          pink: '#ec4899', // More contrasted pink (pink-500)
+          red: '#ef4444', // More contrasted red (red-500)
+          cyan: '#06b6d4', // More contrasted cyan (cyan-500)
+          teal: '#14b8a6', // More contrasted teal (teal-500)
         },
       },
       backgroundImage: {

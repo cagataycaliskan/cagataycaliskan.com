@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "set NEXT_TELEMETRY_DISABLED=1 && next dev",
     "dev:clean": "rmdir /s /q .next 2>nul & set NEXT_TELEMETRY_DISABLED=1 && next dev",
-    "build": "next build",
+    "build": "set NEXT_TELEMETRY_DISABLED=1 && next build",
+    "build:clean": "rmdir /s /q .next 2>nul & set NEXT_TELEMETRY_DISABLED=1 && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -22,10 +23,24 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
+    "critters": "^0.0.20",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "Chrome >= 84",
+    "Firefox >= 78",
+    "Safari >= 13",
+    "Edge >= 84",
+    "not dead",
+    "not IE 11",
+    "not op_mini all"
+  ]
 }

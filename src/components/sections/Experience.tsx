@@ -85,6 +85,7 @@ export default function Experience({ translations }: ExperienceProps) {
 
   return (
     <div className="w-full">
+      <h2 className="sr-only">Professional Experience</h2>
 
       <motion.div
         variants={containerVariants}
