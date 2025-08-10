@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { experienceData, type Experience } from '@/lib/constants';
 import { Card } from '@/components/ui/Card';
 
@@ -21,6 +21,7 @@ export default function Experience({ translations }: ExperienceProps) {
   const [selectedExperience, setSelectedExperience] = useState<Experience | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   const t = useTranslations();
+  const locale = useLocale();
 
   // Check if device is mobile
   useEffect(() => {
@@ -39,23 +40,30 @@ export default function Experience({ translations }: ExperienceProps) {
     
     const months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
     
+    const monthText = months === 1 ? t('common.month') : t('common.months');
+    const yearText = t('common.year');
+    
     if (months < 12) {
-      return `${months} ay`;
+      return `${months} ${monthText}`;
     }
     
     const years = Math.floor(months / 12);
     const remainingMonths = months % 12;
     
     if (remainingMonths === 0) {
-      return `${years} yıl`;
+      return `${years} ${yearText}`;
     }
     
-    return `${years} yıl ${remainingMonths} ay`;
+    const remainingMonthText = remainingMonths === 1 ? t('common.month') : t('common.months');
+    return `${years} ${yearText} ${remainingMonths} ${remainingMonthText}`;
   };
 
   const formatDate = (date: Date | "Present"): string => {
-    if (date === "Present") return "Devam ediyor";
-    return new Date(date).toLocaleDateString('tr-TR', { 
+    if (date === "Present") return t('common.present');
+    
+    const localeCode = locale === 'tr' ? 'tr-TR' : 'en-US';
+    
+    return new Date(date).toLocaleDateString(localeCode, { 
       month: 'long', 
       year: 'numeric' 
     });

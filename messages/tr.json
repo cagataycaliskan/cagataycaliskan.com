@@ -76,5 +76,13 @@
   },
   "metadata": {
     "description": "Çağatay Çalışkan - React, TypeScript, Next.js konularında uzmanlaşmış Frontend Developer. Modern web uygulamaları geliştirme, kullanıcı deneyimi ve performans odaklı çalışmalar."
+  },
+  "common": {
+    "months": "ay",
+    "month": "ay",
+    "years": "yıl",
+    "year": "yıl",
+    "present": "Devam ediyor",
+    "turkey": "Türkiye"
   }
 }

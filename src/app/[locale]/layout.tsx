@@ -131,7 +131,7 @@ export default async function RootLayout({
               "@type": "Person",
               "name": "Çağatay Çalışkan",
               "jobTitle": "Frontend Developer",
-              "description": "Full-stack developer with expertise in React, TypeScript, Next.js, and modern web technologies",
+              "description": "Frontend Developer with expertise in React, TypeScript, Next.js, and modern web technologies",
               "url": "https://cagataycaliskan.com",
               "sameAs": [
                 "https://github.com/cagataycaliskan",
@@ -141,6 +141,9 @@ export default async function RootLayout({
               "knowsAbout": [
                 "Software Development",
                 "Full Stack Development",
+                "Frontend Development",
+                "Mobile Development",
+                "Flutter",
                 "React",
                 "TypeScript",
                 "Next.js",
