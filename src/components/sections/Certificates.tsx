@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect, memo } from 'react';
+import { useState, memo } from 'react';
 import { createPortal } from 'react-dom';
 import { certificatesData, type Certificate } from '@/lib/constants';
 import { Card } from '@/components/ui/Card';
@@ -23,55 +23,56 @@ function CertificateLightbox({ certificate, onClose }: CertificateLightboxProps)
       onClick={onClose}
     >
       <motion.div
-        initial={{ scale: 0.8, opacity: 0 }}
+        initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.8, opacity: 0 }}
-        className="relative max-w-4xl w-full max-h-[90vh] flex flex-col"
+        exit={{ scale: 0.9, opacity: 0 }}
+        className="bg-white dark:bg-gray-900 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 z-20 w-10 h-10 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors"
-        >
-          ✕
-        </button>
-        
-        <div className="flex-1 overflow-hidden rounded-lg">
+        <div className="relative">
           <Image
             src={certificate.image}
             alt={certificate.title}
-            width={800}
-            height={600}
-            className="w-full h-full object-contain rounded-lg shadow-2xl"
-            quality={85}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 800px"
+            width={540}
+            height={400}
+            className="w-full h-auto object-contain rounded-t-xl"
+            quality={75}
+            sizes="(max-width: 768px) 100vw, 540px"
             loading="eager"
+            priority
           />
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 w-10 h-10 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors"
+          >
+            ✕
+          </button>
         </div>
         
-        {/* Mobile: Bottom details panel, Desktop: Side overlay */}
-        <div className="mt-4 md:absolute md:bottom-4 md:right-4 md:mt-0 bg-white/95 dark:bg-gray-800/95 backdrop-blur-md p-4 rounded-lg shadow-lg md:max-w-sm w-full md:w-auto border border-gray-200/20 dark:border-gray-700/30">
-          <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{certificate.title}</h3>
-          <p className="text-gray-600 dark:text-gray-300 mb-2">{certificate.issuer} • {certificate.date}</p>
+        <div className="p-6">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{certificate.title}</h3>
+          <p className="text-gray-600 dark:text-gray-400 mb-4">{certificate.issuer} • {certificate.date}</p>
           
           {certificate.skills.length > 0 && (
-            <div className="flex flex-wrap gap-2 mb-3">
-              {certificate.skills.map((skill, index) => (
-                <span
-                  key={index}
-                  className="px-2 py-1 bg-blue-600 text-white rounded text-sm font-medium"
-                >
-                  {skill}
-                </span>
-              ))}
+            <div className="mb-6">
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Skills Covered:</h4>
+              <div className="flex flex-wrap gap-2">
+                {certificate.skills.map((skill, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           )}
           
           {certificate.verificationUrl && (
             <Button
-              size="sm"
               onClick={() => window.open(certificate.verificationUrl, '_blank')}
-              className="bg-blue-600 hover:bg-blue-700 text-white w-full md:w-auto"
+              className="w-full"
             >
               Verify Certificate
             </Button>
@@ -166,8 +167,8 @@ const Certificates = memo(function Certificates() {
                   className="w-full h-full object-cover rounded-t-lg"
                   quality={75}
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  priority={index < 2}
-                  loading={index < 2 ? 'eager' : 'lazy'}
+                  priority
+                  loading="eager"
                   placeholder="blur"
                   blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 />

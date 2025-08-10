@@ -57,10 +57,11 @@ function ProjectModal({ project, onClose, translations }: ProjectModalProps) {
             alt={project.title}
             width={640}
             height={480}
-            className="w-full h-96 object-cover rounded-t-xl"
+            className="w-full h-auto object-contain rounded-t-xl"
             quality={80}
             sizes="(max-width: 768px) 100vw, 640px"
-            loading="lazy"
+            loading="eager"
+            priority
           />
           <button
             onClick={onClose}
@@ -238,7 +239,7 @@ const Projects = memo(function Projects({ translations }: ProjectsProps) {
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         <AnimatePresence>
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project) => (
             <motion.div
               key={project.title}
               variants={itemVariants}
@@ -256,7 +257,10 @@ const Projects = memo(function Projects({ translations }: ProjectsProps) {
                     className="w-full h-full object-contain rounded-t-lg"
                     quality={75}
                     sizes="(max-width: 768px) 100vw, 400px"
-                    loading="lazy"
+                    loading="eager"
+                    priority
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGBAoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoK/9sAQwEHBwcKCAoTCgoTCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoK/8AAEQgAAAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                   />
                   
                   {project.featured && (
