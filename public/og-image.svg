@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Main Logo Circle -->
+  <circle cx="300" cy="315" r="80" fill="url(#logoGradient)" opacity="0.9"/>
+  <text x="300" y="335" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="48" font-weight="bold">CC</text>
+  
+  <!-- Main Text -->
+  <text x="500" y="280" fill="white" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Çağatay Çalışkan</text>
+  <text x="500" y="340" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="32" font-weight="400">Frontend Developer</text>
+  <text x="500" y="390" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="24" font-weight="300">React • TypeScript • Next.js</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="1000" cy="150" r="3" fill="white" opacity="0.3"/>
+  <circle cx="1050" cy="200" r="2" fill="white" opacity="0.4"/>
+  <circle cx="950" cy="250" r="4" fill="white" opacity="0.2"/>
+  <circle cx="1100" cy="300" r="3" fill="white" opacity="0.3"/>
+  <circle cx="980" cy="350" r="2" fill="white" opacity="0.5"/>
+  
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="50%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,9 +1,88 @@
 {
   "welcomeUC": "WELCOME",
-  "welcomeText": "My name is Çağatay Çalışkan, and I work as a Front-end Developer. I was born in Turkey in 1998 and graduated from Anadolu University with a degree in Aviation Management. I have a strong passion for software development and enjoy learning new technologies. I focus on delivering the best solutions in the projects I work on, prioritizing user experience and performance. I believe in continuous learning and strive to create innovative and impactful projects.",
+  "welcomeText": "I'm Çağatay Çalışkan, a Front-end Developer who creates modern web and mobile applications. I develop scalable web projects with React and Next.js, and high-performance mobile apps with Flutter. I focus on user experience, performance optimization, and clean code principles while developing my projects. Meanwhile, I'm progressing towards becoming a full-stack developer who can produce end-to-end solutions by learning backend technologies. I see technology not just as a tool, but as a field that makes human life easier and adds value. My goal is to elevate digital experiences to the highest level with powerful and innovative projects.",
   "technologiesIUse": "Technologies I Use",
   "homePage": "HOMEPAGE",
-  "aboutMe": "ABOUT ME",
-  "contactMe": "CONTACT ME",
-  "myCertificates": "My Certificates"
+  "myCertificates": "My Certificates",
+  "experience": "Experience",
+  "projects": "Projects",
+  "certificates": "Certificates",
+  "techStack": "Tech Stack",
+  "keyAchievements": "Key Achievements",
+  "diatics": {
+    "achievement1": "Multi-language integration across 100+ pages in large-scale project",
+    "achievement2": "React web layer development for WebView-based mobile application",
+    "achievement3": "Complex role-based conditional rendering architecture implementation",
+    "achievement4": "QR code-based factory fault and alert tracking system development",
+    "achievement5": "Solo completion and optimization of 30+ page React project",
+    "achievement6": "Reusable component architecture design and development",
+    "achievement7": "Comprehensive performance optimization for application enhancement",
+    "achievement8": "Advanced form builder system - multi-data types, file uploads, formula-based auto-calculation and cross-platform data entry",
+    "achievement9": "Complex configuration system - dynamic form structure and conditional field visibility"
+  },
+  "netCallCenter": {
+    "achievement1": "3 enterprise websites development with Next.js - 5 language support and performance optimization",
+    "achievement2": "Call center management system - dual role-based interface for agents and team leads",
+    "achievement3": "Legacy system modernization - consolidating 2 separate Pure JS projects into single React-Vite system",
+    "achievement4": "Real-time calling system development with WebSocket and SignalR integration",
+    "achievement5": "VoIP integration and call management using JSSIP library",
+    "achievement6": "Performance tracking system - detailed analytics and reporting interface for agents",
+    "achievement7": "Comprehensive authorization system and secure architecture design"
+  },
+  "personal": {
+    "fullName": "Çağatay Çalışkan",
+    "jobTitle": "Frontend Developer",
+    "experienceYears": "2+",
+    "experienceLabel": "Years Experience",
+    "companiesCount": "2",
+    "companiesLabel": "Companies"
+  },
+  "filters": {
+    "all": "All",
+    "personal": "Personal",
+    "work": "Work"
+  },
+  "techStackCategories": {
+    "frontend": "Frontend",
+    "tools": "Tools",
+    "learning": "Learning",
+    "technologiesCount": "technologies"
+  },
+  "projectDetails": {
+    "portfolioWebsite": {
+      "title": "Portfolio Website",
+      "description": "Modern, responsive portfolio website built with Next.js 14 and TypeScript"
+    },
+    "buttons": {
+      "viewCode": "View Code",
+      "liveDemo": "Live Demo",
+      "code": "Code",
+      "live": "Live"
+    },
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "comingSoon": "Coming Soon"
+    },
+    "technologiesUsed": "Technologies Used:",
+    "featured": "Featured",
+    "more": "more"
+  },
+  "categories": {
+    "personal": "Personal",
+    "work": "Work",
+    "enterprise": "Enterprise",
+    "sideProject": "Side Project"
+  },
+  "metadata": {
+    "description": "Çağatay Çalışkan - Frontend Developer specializing in React, TypeScript, Next.js. Building modern web applications with focus on user experience and performance."
+  },
+  "common": {
+    "months": "months",
+    "month": "month",
+    "years": "years",
+    "year": "year",
+    "present": "Present",
+    "turkey": "Turkey"
+  }
 }

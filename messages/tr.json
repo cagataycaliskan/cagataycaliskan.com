@@ -1,9 +1,88 @@
 {
   "welcomeUC": "HOŞ GELDİNİZ",
-  "welcomeText": "Benim adım Çağatay Çalışkan, Front-end Developer olarak çalışıyorum. 1998 yılında Türkiye’de doğdum ve Anadolu Üniversitesi Havacılık Yönetimi bölümünden mezun oldum. Yazılım geliştirmeye büyük bir tutku duyuyor, yeni teknolojileri öğrenmekten keyif alıyorum. Çalıştığım projelerde en iyi çözümleri üretmeye odaklanarak, kullanıcı deneyimini ve performansı ön planda tutuyorum. Sürekli gelişime inanıyor ve güçlü, yenilikçi projeler oluşturmaya devam ediyorum.",
+  "welcomeText": "Ben Çağatay Çalışkan, modern web ve mobil uygulamalar geliştiren bir Front-end Developer'ım. React ve Next.js ile ölçeklenebilir web projeleri, Flutter ile yüksek performanslı mobil uygulamalar üretiyorum. Kullanıcı deneyimi, performans optimizasyonu ve temiz kod prensiplerine odaklanarak projelerimi geliştiriyorum. Bir yandan backend teknolojilerini öğrenerek uçtan uca çözüm üretebilen full stack bir geliştirici olma yolunda ilerliyorum. Teknolojiyi yalnızca bir araç olarak değil, insan hayatını kolaylaştıran ve değer katan bir alan olarak görüyorum. Amacım, güçlü ve yenilikçi projelerle dijital deneyimleri en üst seviyeye taşımak.",
   "technologiesIUse": "Kullandığım Teknolojiler",
   "homePage": "ANA SAYFA",
-  "aboutMe": "HAKKIMDA",
-  "contactMe": "İLETİŞİM",
-  "myCertificates": "Sertifikalarım"
+  "myCertificates": "Sertifikalarım",
+  "experience": "Deneyim",
+  "projects": "Projeler",
+  "certificates": "Sertifikalar",
+  "techStack": "Teknolojiler",
+  "keyAchievements": "Temel Başarılar",
+  "diatics": {
+    "achievement1": "Büyük ölçekli projede 100+ sayfaya çoklu dil desteği entegre etme",
+    "achievement2": "WebView tabanlı mobil uygulama için React web katmanı geliştirme",
+    "achievement3": "Karmaşık rol ve yetki sistemi ile koşullu rendering mimarisi kurma",
+    "achievement4": "QR kod tabanlı fabrika arıza ve ikaz takip sistemi geliştirme",
+    "achievement5": "30+ sayfalı React projesini tek başına tamamlama ve optimize etme",
+    "achievement6": "Yeniden kullanılabilir bileşen mimarisi tasarlama ve geliştirme",
+    "achievement7": "Uygulama performansını artırmak için kapsamlı optimizasyon çalışmaları",
+    "achievement8": "Gelişmiş form builder sistemi - çoklu veri tipi, dosya yükleme, formül ile otomatik hesaplama ve platform bağımsız veri girişi",
+    "achievement9": "Karmaşık konfigürasyon sistemi - dinamik form yapısı ve koşullu alan görünürlüğü"
+  },
+  "netCallCenter": {
+    "achievement1": "Next.js ile 3 adet kurumsal web sitesi geliştirme - 5 dil desteği ve performans optimizasyonu",
+    "achievement2": "Call center yönetim sistemi - müşteri temsilcisi ve takım lideri için rol tabanlı çifte arayüz",
+    "achievement3": "Legacy sistemin modernizasyonu - 2 ayrı Pure JS projeyi React-Vite ile tek sisteme entegre etme",
+    "achievement4": "WebSocket ve SignalR ile gerçek zamanlı arama sistemi geliştirme",
+    "achievement5": "JSSIP kütüphanesi ile VoIP entegrasyonu ve arama yönetimi",
+    "achievement6": "Performans takip sistemi - müşteri temsilcilerinin detaylı analiz ve raporlama arayüzü",
+    "achievement7": "Kapsamlı yetki kontrol sistemi ve güvenli mimari tasarımı"
+  },
+  "personal": {
+    "fullName": "Çağatay Çalışkan",
+    "jobTitle": "Frontend Developer",
+    "experienceYears": "2+",
+    "experienceLabel": "Yıl Deneyim",
+    "companiesCount": "2",
+    "companiesLabel": "Şirket"
+  },
+  "filters": {
+    "all": "Tümü",
+    "personal": "Kişisel",
+    "work": "İş"
+  },
+  "techStackCategories": {
+    "frontend": "Ön Yüz",
+    "tools": "Araçlar",
+    "learning": "Öğreniyorum",
+    "technologiesCount": "teknoloji"
+  },
+  "projectDetails": {
+    "portfolioWebsite": {
+      "title": "Portföy Web Sitesi",
+      "description": "Next.js 14 ve TypeScript ile geliştirilmiş modern, duyarlı portföy web sitesi"
+    },
+    "buttons": {
+      "viewCode": "Kodu Görüntüle",
+      "liveDemo": "Canlı Demo",
+      "code": "Kod",
+      "live": "Canlı"
+    },
+    "status": {
+      "completed": "Tamamlandı",
+      "inProgress": "Devam Ediyor",
+      "comingSoon": "Yakında"
+    },
+    "technologiesUsed": "Kullanılan Teknolojiler:",
+    "featured": "Öne Çıkan",
+    "more": "tane daha"
+  },
+  "categories": {
+    "personal": "Kişisel",
+    "work": "İş",
+    "enterprise": "Kurumsal",
+    "sideProject": "Yan Proje"
+  },
+  "metadata": {
+    "description": "Çağatay Çalışkan - React, TypeScript, Next.js konularında uzmanlaşmış Frontend Developer. Modern web uygulamaları geliştirme, kullanıcı deneyimi ve performans odaklı çalışmalar."
+  },
+  "common": {
+    "months": "ay",
+    "month": "ay",
+    "years": "yıl",
+    "year": "yıl",
+    "present": "Devam ediyor",
+    "turkey": "Türkiye"
+  }
 }
