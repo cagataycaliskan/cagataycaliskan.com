@@ -7,10 +7,10 @@ RUN npm install
 FROM node:20-alpine AS builder
 WORKDIR /src
 COPY --from=deps /src/node_modules ./node_modules
-COPY public ./public
-COPY src ./src
-COPY messages ./messages
 COPY package.json next.config.js postcss.config.js tailwind.config.ts ./
+COPY public ./public
+COPY messages ./messages
+COPY src ./src
 RUN npm run build
 
 FROM node:20-alpine
