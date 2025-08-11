@@ -56,18 +56,26 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       siteName: 'Çağatay Çalışkan Portfolio',
       title: 'Çağatay Çalışkan - Frontend Developer',
       description: t('description'),
-      images: [{
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Çağatay Çalışkan - Frontend Developer',
-      }],
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'Çağatay Çalışkan - Frontend Developer',
+        },
+        {
+          url: '/og-image-square.png',
+          width: 800,
+          height: 800,
+          alt: 'Çağatay Çalışkan - Frontend Developer',
+        }
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: 'Çağatay Çalışkan - Frontend Developer',
       description: t('description'),
-      images: ['/og-image.png'],
+      images: ['/og-image.png', '/og-image-square.png'],
       creator: '@cagataycaliskan',
     },
     robots: {
