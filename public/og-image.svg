@@ -9,7 +9,7 @@
   <!-- Main Text -->
   <text x="500" y="280" fill="white" font-family="Arial, sans-serif" font-size="48" font-weight="bold">Çağatay Çalışkan</text>
   <text x="500" y="340" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="32" font-weight="400">Frontend Developer</text>
-  <text x="500" y="390" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="24" font-weight="300">React • TypeScript • Next.js</text>
+  <text x="500" y="390" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="24" font-weight="300">React • TypeScript • Next.js • Flutter</text>
   
   <!-- Decorative Elements -->
   <circle cx="1000" cy="150" r="3" fill="white" opacity="0.3"/>

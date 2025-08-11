@@ -57,7 +57,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       title: 'Çağatay Çalışkan - Frontend Developer',
       description: t('description'),
       images: [{
-        url: '/og-image.svg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Çağatay Çalışkan - Frontend Developer',
@@ -67,7 +67,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       card: 'summary_large_image',
       title: 'Çağatay Çalışkan - Frontend Developer',
       description: t('description'),
-      images: ['/og-image.svg'],
+      images: ['/og-image.png'],
       creator: '@cagataycaliskan',
     },
     robots: {
