@@ -102,9 +102,9 @@ export default function Experience({ translations }: ExperienceProps) {
         className="relative"
       >
         {/* Interactive Timeline line */}
-        <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 rounded-full shadow-lg hidden md:block overflow-hidden">
+        <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-primary rounded-full shadow-lg hidden md:block overflow-hidden">
           <motion.div
-            className="w-full bg-gradient-to-b from-blue-400 via-purple-400 to-pink-400 opacity-0"
+            className="w-full bg-gradient-secondary opacity-0"
             animate={{
               height: selectedExperience ? "100%" : "0%",
               opacity: selectedExperience ? 0.8 : 0
@@ -129,16 +129,16 @@ export default function Experience({ translations }: ExperienceProps) {
                 animate={{
                   scale: selectedExperience === experience ? 1.3 : 1,
                   background: selectedExperience === experience 
-                    ? "linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899)"
-                    : "linear-gradient(135deg, #60a5fa, #a78bfa)",
+                    ? "linear-gradient(135deg, #0ea5e9, #0284c7, #06b6d4)"
+                    : "linear-gradient(135deg, #0ea5e9, #0284c7)",
                   boxShadow: selectedExperience === experience 
-                    ? "0 0 25px rgba(59, 130, 246, 0.6), 0 0 50px rgba(139, 92, 246, 0.4)"
-                    : "0 4px 15px rgba(59, 130, 246, 0.3)"
+                    ? "0 0 25px rgba(14, 165, 233, 0.6), 0 0 50px rgba(2, 132, 199, 0.4)"
+                    : "0 4px 15px rgba(14, 165, 233, 0.3)"
                 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 whileHover={{ 
                   scale: 1.2,
-                  boxShadow: "0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(139, 92, 246, 0.3)"
+                  boxShadow: "0 0 20px rgba(14, 165, 233, 0.5), 0 0 40px rgba(2, 132, 199, 0.3)"
                 }}
                 onClick={() => setSelectedExperience(selectedExperience === experience ? null : experience)}
               />
@@ -150,7 +150,7 @@ export default function Experience({ translations }: ExperienceProps) {
                       <div className="flex items-start gap-4 mb-4">
                         {/* Company Logo Placeholder */}
                         <div className="flex-shrink-0">
-                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center shadow-lg">
+                          <div className="w-12 h-12 bg-gradient-secondary rounded-lg flex items-center justify-center shadow-lg">
                             <span className="text-white font-bold text-lg">
                               {experience.company.charAt(0)}
                             </span>
@@ -158,17 +158,17 @@ export default function Experience({ translations }: ExperienceProps) {
                         </div>
                         
                         <div className="flex-1 min-w-0">
-                          <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-1">
+                          <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-primary dark:group-hover:text-blue-400 transition-colors mb-1">
                             {experience.position}
                           </h3>
-                          <p className="text-lg text-blue-600 dark:text-blue-400 font-semibold mb-2">
+                          <p className="text-lg text-brand-primary dark:text-blue-400 font-semibold mb-2">
                             {experience.company}
                           </p>
                           
                           <div className="flex flex-wrap items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                             <span>{formatDate(experience.startDate)} - {formatDate(experience.endDate)}</span>
                             <span>•</span>
-                            <span className="font-medium text-blue-600 dark:text-blue-400">{calculateDuration(experience.startDate, experience.endDate)}</span>
+                            <span className="font-medium text-brand-primary dark:text-blue-400">{calculateDuration(experience.startDate, experience.endDate)}</span>
                             {experience.location && (
                               <>
                                 <span>•</span>
@@ -184,7 +184,7 @@ export default function Experience({ translations }: ExperienceProps) {
                           {experience.technologies.map((tech, techIndex) => (
                             <span
                               key={techIndex}
-                              className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium hover:scale-105 transition-transform cursor-pointer"
+                              className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-brand-primary dark:text-blue-200 rounded-full text-sm font-medium hover:scale-105 transition-transform cursor-pointer"
                             >
                               {tech}
                             </span>
@@ -202,14 +202,14 @@ export default function Experience({ translations }: ExperienceProps) {
                         className="overflow-hidden"
                       >
                         <motion.div 
-                          className="pt-6 border-t border-gradient-to-r from-blue-200 to-purple-200 dark:from-blue-700 dark:to-purple-700"
+                          className="pt-6 border-t border-blue-200 dark:border-blue-700"
                           initial={{ y: -10 }}
                           animate={{ y: 0 }}
                           transition={{ delay: 0.2 }}
                         >
                           <div className="flex items-center gap-2 mb-4">
-                            <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse" />
-                            <h4 className="font-bold text-gray-900 dark:text-white text-lg bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                            <div className="w-2 h-2 bg-gradient-secondary rounded-full animate-pulse" />
+                            <h4 className="font-bold text-gray-900 dark:text-white text-lg bg-gradient-secondary bg-clip-text text-transparent">
                               {t('keyAchievements')}
                             </h4>
                           </div>
@@ -222,7 +222,7 @@ export default function Experience({ translations }: ExperienceProps) {
                                 animate={{ x: 0, opacity: 1 }}
                                 transition={{ delay: 0.3 + achievementIndex * 0.1 }}
                               >
-                                <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform ml-1" />
+                                <div className="w-2 h-2 bg-gradient-secondary rounded-full mt-2 flex-shrink-0 group-hover:scale-125 transition-transform ml-1" />
                                 <span className="group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors flex-1">
                                   {t(achievement)}
                                 </span>

@@ -60,7 +60,7 @@ function CertificateLightbox({ certificate, onClose }: CertificateLightboxProps)
                 {certificate.skills.map((skill, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                    className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-brand-primary dark:text-blue-200 rounded-full text-sm font-medium"
                   >
                     {skill}
                   </span>
@@ -198,7 +198,7 @@ const Certificates = memo(function Certificates() {
                     {certificate.skills.slice(0, 3).map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded text-xs font-medium"
+                        className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-brand-primary dark:text-blue-200 rounded text-xs font-medium"
                       >
                         {skill}
                       </span>
