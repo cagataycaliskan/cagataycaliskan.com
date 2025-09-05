@@ -78,11 +78,11 @@ const Select = React.forwardRef<HTMLDivElement, SelectProps>(
             "hover:bg-white dark:hover:bg-gray-800",
             "hover:border-gray-300 dark:hover:border-gray-600",
             "hover:shadow-md",
-            "focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500",
+            "focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary",
             "disabled:opacity-50 disabled:cursor-not-allowed",
             "group",
             {
-              "ring-2 ring-blue-500/20 border-blue-500 shadow-md": isOpen,
+              "ring-2 ring-brand-primary/20 border-brand-primary shadow-md": isOpen,
             },
             sizeClasses[size]
           )}
@@ -104,7 +104,7 @@ const Select = React.forwardRef<HTMLDivElement, SelectProps>(
             className={cn(
               "w-4 h-4 transition-all duration-300 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300",
               { 
-                "rotate-180 text-blue-500": isOpen,
+                "rotate-180 text-brand-primary": isOpen,
                 "group-hover:scale-110": !isOpen
               }
             )}
@@ -136,11 +136,11 @@ const Select = React.forwardRef<HTMLDivElement, SelectProps>(
                   onClick={() => handleSelect(option)}
                   className={cn(
                     "w-full flex items-center gap-2 px-2 py-2 text-left rounded-lg transition-all duration-200",
-                    "hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-blue-900/20 dark:hover:to-purple-900/20",
-                    "focus:outline-none focus:ring-2 focus:ring-blue-500/20",
+                    "hover:bg-blue-50 dark:hover:bg-blue-900/20",
+                    "focus:outline-none focus:ring-2 focus:ring-brand-primary/20",
                     "group relative overflow-hidden",
                     {
-                      "bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30": 
+                      "bg-blue-50 dark:bg-blue-900/30": 
                         option.value === selectedOption?.value,
                       "text-gray-700 dark:text-gray-200": option.value !== selectedOption?.value,
                     }
@@ -157,13 +157,13 @@ const Select = React.forwardRef<HTMLDivElement, SelectProps>(
                     </div>
                   )}
                   <div className="flex-1 min-w-0">
-                    <div className="font-medium text-sm group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                    <div className="font-medium text-sm group-hover:text-brand-primary dark:group-hover:text-blue-400 transition-colors duration-200">
                       {option.label}
                     </div>
                   </div>
                   {option.value === selectedOption?.value && (
                     <div className="flex-shrink-0">
-                      <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse" />
+                      <div className="w-2 h-2 bg-gradient-secondary rounded-full animate-pulse" />
                     </div>
                   )}
                 </button>

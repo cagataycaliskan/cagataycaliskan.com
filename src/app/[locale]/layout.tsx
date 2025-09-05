@@ -196,7 +196,7 @@ export default async function RootLayout({
       </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans min-h-screen flex flex-col bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 dark:from-gray-900 dark:via-gray-900 dark:to-slate-900 text-black dark:text-white`} suppressHydrationWarning>
         {/* Skip Links */}
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:z-50">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-primary text-white px-4 py-2 rounded-md z-50 focus:z-50">
           Skip to main content
         </a>
         <NextIntlClientProvider locale={locale} messages={messages}>
@@ -206,10 +206,10 @@ export default async function RootLayout({
               {/* Logo - Always Left */}
               <Link href={`/${locale}`} passHref legacyBehavior>
                 <a className="group flex items-center space-x-3" aria-label="Go to homepage">
-                  <div className="w-8 h-8 md:w-8 md:h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-sm" aria-hidden="true">
+                  <div className="w-8 h-8 md:w-8 md:h-8 bg-gradient-primary rounded-lg flex items-center justify-center text-white font-bold text-sm" aria-hidden="true">
                     CC
                   </div>
-                  <span className="gradient-text font-display font-bold text-base md:text-xl group-hover:scale-105 transition-transform duration-200">
+                  <span className="bg-gradient-primary bg-clip-text text-transparent font-display font-bold text-base md:text-xl group-hover:scale-105 transition-transform duration-200">
                     Çağatay Çalışkan
                   </span>
                 </a>

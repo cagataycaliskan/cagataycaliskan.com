@@ -84,10 +84,10 @@ export default function Sidebar({
       >
         <div className="sidebar-header">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
+            <div className="w-8 h-8 bg-gradient-blue rounded-lg flex items-center justify-center text-white font-bold text-sm">
               CC
             </div>
-            <span className="gradient-text font-display font-bold text-base group-hover:scale-105 transition-transform duration-200">
+            <span className="bg-gradient-primary bg-clip-text text-transparent font-display font-bold text-base group-hover:scale-105 transition-transform duration-200">
               Çağatay Çalışkan
             </span>
           </div>

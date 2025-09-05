@@ -152,7 +152,7 @@ body {
   color: white !important; /* White text for active state */
 }
 
-.group[data-state="active"] .group-hover\\:text-purple-500 {
+.group[data-state="active"] .group-hover\\:text-cyan-500 {
   color: white !important; /* White text for active state */
 }
 
@@ -169,8 +169,8 @@ body {
   color: rgb(29, 78, 216) !important; /* Darker blue for better contrast */
 }
 
-.group:not([data-state="active"]) .group-hover\\:text-purple-500 {
-  color: rgb(107, 33, 168) !important; /* Darker purple for better contrast */
+.group:not([data-state="active"]) .group-hover\\:text-cyan-500 {
+  color: rgb(6, 182, 212) !important; /* Darker cyan for better contrast */
 }
 
 .group:not([data-state="active"]) .group-hover\\:text-green-500 {
@@ -193,8 +193,8 @@ button[data-state="active"] {
   color: rgb(29, 78, 216) !important;
 }
 
-.group:hover .group-hover\\:text-purple-500 {
-  color: rgb(109, 40, 217) !important;
+.group:hover .group-hover\\:text-cyan-500 {
+  color: rgb(6, 182, 212) !important;
 }
 
 .group:hover .group-hover\\:text-green-500 {
@@ -251,7 +251,7 @@ button[data-state="active"] {
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -268,15 +268,15 @@ button[data-state="active"] {
   
   .btn-primary {
     @apply px-6 py-3 rounded-lg font-medium transition-all duration-200;
-    @apply bg-gradient-to-r from-accent-blue to-accent-purple;
+    @apply bg-gradient-blue;
     @apply text-white hover:shadow-glow hover:scale-105;
-    @apply focus:outline-none focus:ring-2 focus:ring-accent-blue focus:ring-offset-2;
+    @apply focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2;
   }
   
   .btn-secondary {
     @apply px-6 py-3 rounded-lg font-medium transition-all duration-200;
-    @apply bg-transparent border-2 border-accent-blue text-accent-blue;
-    @apply hover:bg-accent-blue hover:text-white;
+    @apply bg-transparent border-2 border-brand-primary text-brand-primary;
+    @apply hover:bg-brand-primary hover:text-white;
   }
   
   .card {

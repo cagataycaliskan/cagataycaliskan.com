@@ -11,17 +11,17 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          50: '#f8fafc',
-          100: '#f1f5f9', 
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-          950: '#020617',
+          50: '#fafcff',
+          100: '#f2f7ff', 
+          200: '#e1edff',
+          300: '#c7dcff',
+          400: '#93c0ff',
+          500: '#5fa3ff',
+          600: '#2e7df6',
+          700: '#1d5bd9',
+          800: '#1a4bb8',
+          900: '#1a3d96',
+          950: '#142a5e',
         },
         dark: {
           bg: '#0a0e1a',
@@ -35,21 +35,48 @@ const config: Config = {
           tertiary: '#e9ecef',
         },
         accent: {
-          blue: '#3b82f6', // More contrasted blue (blue-500)
-          purple: '#7c3aed', // More contrasted purple (violet-600)
-          pink: '#ec4899', // More contrasted pink (pink-500)
-          red: '#ef4444', // More contrasted red (red-500)
-          cyan: '#06b6d4', // More contrasted cyan (cyan-500)
-          teal: '#14b8a6', // More contrasted teal (teal-500)
+          blue: '#0ea5e9',
+          darkblue: '#0284c7', 
+          cyan: '#06b6d4',
+          red: '#dc2626',
+          orange: '#ea580c',
+          yellow: '#ca8a04',
+          green: '#16a34a',
+          teal: '#0891b2',
+          lightblue: '#38bdf8',
+          navy: '#1e40af',
+        },
+        // Centralized Brand Colors - Clean Blue Tech Palette (NO PURPLE)
+        brand: {
+          primary: '#0ea5e9',     // sky-500 - Modern blue
+          secondary: '#0284c7',   // sky-600 - Darker blue
+          tertiary: '#06b6d4',    // cyan-500 - Tech cyan
+          gradient: {
+            primary: 'linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #06b6d4 100%)',
+            blue: 'linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%)',
+            cyan: 'linear-gradient(135deg, #0284c7 0%, #06b6d4 100%)',
+            success: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+            warning: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+          }
+        },
+        // Status Colors
+        status: {
+          success: '#10b981',     // green-500
+          warning: '#f59e0b',     // amber-500
+          error: '#ef4444',       // red-500
+          info: '#3b82f6',        // blue-500
         },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "gradient-primary": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-        "gradient-secondary": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-        "gradient-hover": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-        "gradient-mesh": "radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%)",
+        "gradient-primary": "linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #06b6d4 100%)",
+        "gradient-secondary": "linear-gradient(135deg, #0284c7 0%, #06b6d4 100%)",
+        "gradient-blue": "linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%)",
+        "gradient-success": "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+        "gradient-warning": "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+        "gradient-hover": "linear-gradient(135deg, #0891b2 0%, #16a34a 100%)",
+        "gradient-mesh": "radial-gradient(at 40% 20%, hsla(200,100%,60%,0.3) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(190,100%,50%,0.3) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(180,100%,70%,0.2) 0px, transparent 50%)",
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
@@ -118,8 +145,10 @@ const config: Config = {
         xs: '2px',
       },
       boxShadow: {
-        'glow': '0 0 20px rgba(102, 126, 234, 0.5)',
-        'glow-lg': '0 0 40px rgba(102, 126, 234, 0.3)',
+        'glow': '0 0 20px rgba(14, 165, 233, 0.5)',
+        'glow-lg': '0 0 40px rgba(14, 165, 233, 0.3)',
+        'glow-cyan': '0 0 20px rgba(6, 182, 212, 0.4)',
+        'glow-teal': '0 0 20px rgba(8, 145, 178, 0.4)',
         'inner-lg': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.3)',
       },
     },

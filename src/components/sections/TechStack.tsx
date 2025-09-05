@@ -16,9 +16,9 @@ function SkillItem({ skill, index }: SkillItemProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05, duration: 0.3 }}
-      className="group flex items-center justify-center px-4 py-3 rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800/50 dark:to-gray-700/50 hover:from-blue-50 hover:to-purple-50 dark:hover:from-blue-900/20 dark:hover:to-purple-900/20 transition-all duration-300 cursor-pointer hover:shadow-lg hover:scale-102 border border-gray-200/50 dark:border-gray-600/50"
+      className="group flex items-center justify-center px-4 py-3 rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800/50 dark:to-gray-700/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 cursor-pointer hover:shadow-lg hover:scale-102 border border-gray-200/50 dark:border-gray-600/50"
     >
-      <span className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+      <span className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-brand-primary dark:group-hover:text-blue-400 transition-colors">
         {skill.name}
       </span>
     </motion.div>
@@ -71,10 +71,10 @@ function TechCategory({ category, index }: TechCategoryProps) {
   };
 
   const categoryColors = {
-    Frontend: 'from-blue-500 to-purple-500',
-    Tools: 'from-purple-500 to-pink-500', 
-    Learning: 'from-green-500 to-emerald-500',
-    Backend: 'from-orange-500 to-red-500'
+    Frontend: 'from-brand-primary to-brand-secondary',
+    Tools: 'from-brand-secondary to-brand-tertiary', 
+    Learning: 'from-status-success to-status-success',
+    Backend: 'from-status-warning to-status-error'
   };
 
   return (

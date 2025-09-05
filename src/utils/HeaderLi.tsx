@@ -38,7 +38,7 @@ function HeaderLi({ href, children, className, sidebar = false }: HeaderLiProps)
       >
         {children}
         {isActive && (
-          <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
+          <div className="absolute inset-x-0 bottom-0 h-0.5 bg-brand-primary rounded-full" />
         )}
       </a>
     </Link>

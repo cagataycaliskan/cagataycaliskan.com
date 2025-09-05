@@ -19,14 +19,14 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     disabled, 
     ...props 
   }, ref) => {
-    const baseClasses = "inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
+    const baseClasses = "inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
     
     const variantClasses = {
-      default: "bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:shadow-lg hover:scale-105",
-      secondary: "bg-transparent border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white",
+      default: "bg-gradient-blue text-white hover:shadow-lg hover:scale-105",
+      secondary: "bg-transparent border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white",
       outline: "border border-gray-300 dark:border-gray-600 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100",
       ghost: "hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-100",
-      link: "text-blue-500 underline-offset-4 hover:underline",
+      link: "text-brand-primary underline-offset-4 hover:underline",
       glass: "bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20",
     };
     

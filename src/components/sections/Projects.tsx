@@ -103,7 +103,7 @@ function ProjectModal({ project, onClose, translations }: ProjectModalProps) {
               {project.technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
+                  className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-brand-primary dark:text-blue-200 rounded-full text-sm font-medium"
                 >
                   {tech}
                 </span>
@@ -265,7 +265,7 @@ const Projects = memo(function Projects({ translations }: ProjectsProps) {
                   
                   {project.featured && (
                     <div className="absolute top-4 left-4">
-                      <span className="px-2 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-semibold rounded-full">
+                      <span className="px-2 py-1 bg-gradient-warning text-white text-xs font-semibold rounded-full">
                         {translations.projectDetails?.featured || 'Featured'}
                       </span>
                     </div>
@@ -273,7 +273,7 @@ const Projects = memo(function Projects({ translations }: ProjectsProps) {
                 </div>
                 
                 <div className="p-4 flex-grow flex flex-col justify-between">
-                  <h3 className="font-semibold text-sm text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  <h3 className="font-semibold text-sm text-gray-900 dark:text-white mb-1 group-hover:text-brand-primary dark:group-hover:text-blue-400 transition-colors">
                     {project.title === 'Portfolio Website' 
                       ? translations.projectDetails?.portfolioWebsite?.title || project.title 
                       : project.title}
