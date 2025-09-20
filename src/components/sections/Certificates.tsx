@@ -94,25 +94,33 @@ const Certificates = memo(function Certificates() {
       title: "The Ultimate React Course 2024: React, Redux & More",
       issuer: "Udemy",
       date: "2024",
-      image: "/images/react-sertifika.jpg",
+      image: "/images/react-sertifika.webp",
       verificationUrl: "https://ude.my/UC-a32a2086-9fac-44da-90ba-147073bce8ae",
       skills: ["React", "Redux", "JavaScript"]
     },
     {
       title: "The Modern Javascript Bootcamp Course",
-      issuer: "Udemy", 
+      issuer: "Udemy",
       date: "2023",
-      image: "/images/javascript-sertifika.jpg",
+      image: "/images/javascript-sertifika.webp",
       verificationUrl: "https://www.udemy.com/certificate/UC-db2e4c83-0a2f-4089-af85-2eca28a10285/",
       skills: ["JavaScript", "ES6+"]
     },
     {
       title: "Go - The Complete Guide",
       issuer: "Udemy",
-      date: "2024", 
-      image: "/images/golang-sertifika.jpg",
+      date: "2024",
+      image: "/images/golang-sertifika.webp",
       verificationUrl: "https://www.udemy.com/certificate/UC-6a05c8fe-59fe-4808-8c71-24507ad425bb/",
       skills: ["Golang"]
+    },
+    {
+      title: "Güvenli Yazılım Geliştirme",
+      issuer: "BTK Akademi",
+      date: "2025",
+      image: "/images/guvenli-yazilim-gelistirme-sertifika.webp",
+      verificationUrl: "",
+      skills: ["Security", "Software Development", "Best Practices"]
     }
   ];
 
