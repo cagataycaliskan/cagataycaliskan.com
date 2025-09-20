@@ -119,7 +119,7 @@ const Certificates = memo(function Certificates() {
       issuer: "BTK Akademi",
       date: "2025",
       image: "/images/guvenli-yazilim-gelistirme-sertifika.webp",
-      verificationUrl: "",
+      verificationUrl: "https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=4qgueerO8q",
       skills: ["Security", "Software Development", "Best Practices"]
     }
   ];
