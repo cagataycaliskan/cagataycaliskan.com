@@ -115,7 +115,7 @@ export const projectsData: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     githubUrl: "https://github.com/cagataycaliskan",
     liveUrl: "https://cagataycaliskan.com",
-    image: "/images/cagataycaliskan.png",
+    image: "/images/cagataycaliskan.webp",
     featured: true,
     category: "Personal",
     status: "completed"
